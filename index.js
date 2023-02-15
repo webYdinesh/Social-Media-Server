@@ -31,7 +31,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.status(200).send("ok from server");
+  return res.status(200).send("ok from server");
 });
 
 app.use("/auth", authRouter);
