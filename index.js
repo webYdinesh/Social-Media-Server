@@ -30,12 +30,13 @@ app.use(
   })
 );
 
-app.use("/auth", authRouter);
-app.use("/posts", postsRouter);
-app.use("/user", userRouter);
 app.get("/", (req, res) => {
   res.status(200).send("ok from server");
 });
+
+app.use("/auth", authRouter);
+app.use("/posts", postsRouter);
+app.use("/user", userRouter);
 
 const PORT = process.env.PORT || 4001;
 
